@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1d32">
+  <meta name="description" content="Кейс Дмитрия Сандиева: AI-ассистент в Telegram отвечает по базе знаний отдела с источниками и помогает сотруднику обрабатывать обращения.">
+  <title>Кейс «AI-ассистент в Telegram» — Дмитрий Сандиев</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Дмитрий Сандиев — главная"><span class="brand-mark">ДС</span><span>Дмитрий Сандиев</span></a>
+      <nav class="main-nav" aria-label="Основная навигация"><a href="index.html#cases">Кейсы</a><a href="index.html#about">Обо мне</a><a href="index.html#experience">Опыт</a><a href="index.html#contact">Контакты</a></nav>
+      <a class="header-contact" href="mailto:sandievdmitrii@gmail.com">Написать мне <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="subpage-hero">
+      <div class="container">
+        <a class="back-link" href="index.html#cases">← Все кейсы</a>
+        <p class="section-kicker">Кейс 04 / AI и автоматизация</p>
+        <h1>AI-ассистент в Telegram отвечает <em>на вопросы по базе знаний</em></h1>
+        <p class="subpage-lead">Я подключил к Telegram-боту <a class="inline-link" href="case-knowledge.html">базу знаний отдела</a>. Пользователь задаёт вопрос и получает ответ со ссылками на документы. Когда поступает клиентское обращение, бот уточняет детали и готовит черновик; сотрудник проверяет его перед отправкой.</p>
+        <div class="case-meta">
+          <div><strong>Контекст</strong>База знаний и реальные обращения · ГК СКС</div>
+          <div><strong>Моя роль</strong>Сценарии · требования · проверка диалогов · доработка с AI</div>
+          <div><strong>Инструменты</strong>Telegram · Python · Groq API · GitHub · SQLite</div>
+        </div>
+      </div>
+    </section>
+    <div class="container"><figure class="assistant-visual"><img src="assistant-flow.svg" alt="Схема работы: вопрос в Telegram, поиск в документах, ответ с источниками; для обращения — проверка и отправка сотрудником" width="1600" height="900" decoding="async"></figure></div>
+
+    <section class="case-body">
+      <div class="container case-body-grid">
+        <aside class="case-aside">
+          <p class="section-kicker">В этом кейсе</p>
+          <a href="#task">Задача</a>
+          <a href="#questions">Ответы по базе</a>
+          <a href="#requests">Обращения</a>
+          <a href="#iterations">Что изменил при проверке</a>
+          <a href="#result">Результат</a>
+        </aside>
+        <article class="case-article">
+          <section class="case-block" id="task">
+            <p class="section-kicker">Задача</p>
+            <h2>Помочь найти ответ и не потерять контекст обращения</h2>
+            <p>Документы отдела уже были собраны в <a class="inline-link" href="case-knowledge.html">общем репозитории</a>, но для ответа на вопрос всё равно нужно было открыть нужный файл и найти в нём информацию. В клиентском обращении к этому добавляются уточнение задачи, подготовка ответа и передача результата сотруднику.</p>
+            <p>Я разделил эти действия на два понятных пути: прямой вопрос по базе знаний и обращение, в котором окончательное решение принимает ответственный сотрудник.</p>
+          </section>
+
+          <section class="case-block" id="questions">
+            <p class="section-kicker">Вопросы по документам</p>
+            <h2>Ответ можно проверить по источнику</h2>
+            <p>Доверенный пользователь получает доступ через персональный пароль, привязанный к его Telegram ID. Он задаёт вопрос в боте. Если непонятно, о каком проекте речь, бот сначала просит уточнить запрос. Затем он ищет подходящие фрагменты в локальном индексе документов и готовит ответ на их основе.</p>
+            <p>Под ответом есть кнопки для открытия источников. Если AI недоступен, бот показывает найденные фрагменты, чтобы человек мог продолжить поиск сам. Вопрос по базе не превращается в клиентскую заявку.</p>
+          </section>
+
+          <section class="case-block" id="requests">
+            <p class="section-kicker">Клиентские обращения</p>
+            <h2>Бот готовит ответ, сотрудник решает, что отправить</h2>
+            <p>Когда приходит обращение, бот уточняет недостающие сведения о задаче и сроке, подбирает документы и составляет черновик. Сотрудник видит текст вместе с контекстом и источниками: может исправить его, отправить на доработку или одобрить.</p>
+            <div class="flow-diagram" aria-label="Путь клиентского обращения"><div><small>01 / Обращение</small><strong>Бот уточняет детали</strong></div><div><small>02 / Поиск</small><strong>Находит документы и готовит черновик</strong></div><div><small>03 / Проверка</small><strong>Сотрудник правит или одобряет</strong></div><div><small>04 / Итог</small><strong>Ответ отправлен, результат сохранён</strong></div></div>
+            <p>Карточка обращения и история действий сохраняются только после подтверждённой отправки. Если из-за сетевой ошибки непонятно, дошло ли сообщение, бот не повторяет его автоматически: сотрудник проверяет чат и отмечает результат. После правки старую кнопку одобрения нельзя использовать для отправки прежнего текста.</p>
+          </section>
+
+          <section class="case-block" id="iterations">
+            <p class="section-kicker">Проверка в работе</p>
+            <h2>Доработал сценарии после реальных диалогов</h2>
+            <p>Сначала бот мог принять вопрос сотрудника о проекте за клиентскую заявку. Я разделил эти сценарии и добавил уточнение для расплывчатых вопросов. Длинные ссылки на документы заменил короткими кнопками, а основные действия вынес в меню, чтобы не приходилось помнить команды.</p>
+            <p>Отдельно проверил сбои: при недоступности AI сотрудник видит ручной путь обработки, а при временной недоступности GitHub бот использует последнюю сохранённую версию индекса. Доступ к базе можно выдать и отозвать из меню владельца.</p>
+          </section>
+
+          <section class="case-block" id="result">
+            <p class="section-kicker">Результат</p>
+            <h2>Работающий бот с проверяемыми ответами</h2>
+            <p>Бот уже работает с реальными обращениями. Он отвечает на вопросы по документам с указанием источников и помогает сотруднику довести клиентское обращение до отправленного ответа. Я сформулировал сценарии и требования, проверял диалоги в Telegram, задавал изменения и принимал результат по тестам; код и проверки делал совместно с AI-инструментом.</p>
+            <p>Для основных сценариев пройдено 30 автоматических тестов. Карточки обращений и история действий хранятся в SQLite.</p>
+          </section>
+        </article>
+      </div>
+    </section>
+    <section class="related-cta"><div class="container related-inner"><div><p class="section-kicker">Основа для ответов бота</p><h2>Как устроена база знаний отдела</h2></div><a class="button button-primary" href="case-knowledge.html">Открыть кейс <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Дмитрий Сандиев</span><span>Портфолио · Уфа</span><a href="index.html#contact">Контакты ↗</a></div></footer>
+</body>
+</html>

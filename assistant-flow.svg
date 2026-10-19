@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">AI-ассистент в Telegram и база знаний</title>
+  <desc id="description">Сообщение пользователя проходит через поиск по документам. Бот показывает ответ с источником, а черновик клиентского ответа проверяет сотрудник.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1"><stop stop-color="#071a31"/><stop offset="1" stop-color="#123d62"/></linearGradient>
+    <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#1c5b88"/><stop offset="1" stop-color="#123351"/></linearGradient>
+    <linearGradient id="beam" x2="1"><stop stop-color="#42a9e8"/><stop offset="1" stop-color="#7de0c1"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#80b1d7" stroke-opacity=".09"/></pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#020f21" flood-opacity=".34"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="800" cy="420" r="430" fill="#2070a6" opacity=".11"/>
+  <circle cx="1550" cy="850" r="400" fill="#64d8c3" opacity=".055"/>
+  <text x="85" y="85" fill="#8cc5ec" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="4">AI-АССИСТЕНТ / TELEGRAM</text>
+  <text x="85" y="129" fill="#f0f8ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="32" font-weight="650">Вопрос → документы → проверяемый ответ</text>
+
+  <path d="M565 452 C640 452 633 452 690 452" fill="none" stroke="url(#beam)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M1000 452 C1060 452 1050 452 1114 452" fill="none" stroke="url(#beam)" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="620" cy="452" r="8" fill="#6fd0e4"/>
+  <circle cx="1059" cy="452" r="8" fill="#78ddc1"/>
+
+  <g filter="url(#shadow)">
+    <rect x="85" y="202" width="480" height="548" rx="27" fill="#f7fbff"/>
+    <path d="M85 229Q85 202 112 202H538Q565 202 565 229V286H85Z" fill="#eaf3fa"/>
+    <circle cx="128" cy="244" r="19" fill="#2783bb"/>
+    <path d="m119 244 20-9-5 22-5-7-5 4 1-8Z" fill="#fff"/>
+    <text x="164" y="250" fill="#173750" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">Диалог в Telegram</text>
+    <rect x="181" y="325" width="335" height="86" rx="18" fill="#dbeaf6"/>
+    <text x="207" y="358" fill="#204259" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="550">Что нужно для запуска</text>
+    <text x="207" y="387" fill="#204259" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="550">нового проекта?</text>
+    <rect x="126" y="446" width="363" height="174" rx="18" fill="#fff" stroke="#c6ddea" stroke-width="2"/>
+    <circle cx="155" cy="477" r="12" fill="#73d1bb"/>
+    <text x="180" y="484" fill="#1b5064" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="750">Ассистент</text>
+    <text x="154" y="524" fill="#2c526a" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19">Нашёл порядок запуска</text>
+    <text x="154" y="553" fill="#2c526a" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19">в документах отдела.</text>
+    <rect x="151" y="574" width="209" height="31" rx="8" fill="#e9f5ff"/>
+    <text x="169" y="596" fill="#2369a3" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="650">Открыть источник ↗</text>
+    <rect x="126" y="657" width="390" height="48" rx="11" fill="#eaf1f7"/>
+    <text x="147" y="688" fill="#7894a7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18">Задать вопрос...</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="690" y="232" width="310" height="440" rx="28" fill="url(#glass)" stroke="#72b8de" stroke-opacity=".6" stroke-width="2"/>
+    <circle cx="750" cy="298" r="24" fill="#6ad1ce" opacity=".22"/>
+    <path d="M738 289h25v19h-25zM742 284h17" fill="none" stroke="#9ce9dc" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+    <text x="788" y="304" fill="#eaf8ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">База знаний</text>
+    <text x="730" y="354" fill="#9dcde4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Поиск по локальному индексу</text>
+    <rect x="729" y="390" width="232" height="65" rx="12" fill="#eef8ff"/>
+    <rect x="745" y="411" width="20" height="24" rx="3" fill="#2784bc"/>
+    <text x="779" y="419" fill="#193a53" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="650">Регламент</text>
+    <text x="779" y="443" fill="#728da0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">подходящий фрагмент</text>
+    <rect x="729" y="472" width="232" height="65" rx="12" fill="#eef8ff"/>
+    <rect x="745" y="493" width="20" height="24" rx="3" fill="#4ea9ab"/>
+    <text x="779" y="501" fill="#193a53" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="650">Устав проекта</text>
+    <text x="779" y="525" fill="#728da0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">подходящий фрагмент</text>
+    <rect x="729" y="572" width="232" height="52" rx="11" fill="#65d0c3"/>
+    <text x="748" y="606" fill="#103b48" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="750">Ответ с источниками</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1114" y="278" width="402" height="395" rx="25" fill="#f7fbff"/>
+    <rect x="1114" y="278" width="402" height="74" rx="25" fill="#dff0f3"/>
+    <path d="M1114 325h402v27h-402z" fill="#dff0f3"/>
+    <circle cx="1156" cy="315" r="17" fill="#36a6a7"/>
+    <path d="m1148 315 6 6 10-13" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1186" y="323" fill="#1c4a59" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="23" font-weight="700">Проверка сотрудника</text>
+    <text x="1151" y="403" fill="#31637b" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="750" letter-spacing="1">КЛИЕНТСКОЕ ОБРАЩЕНИЕ</text>
+    <text x="1151" y="448" fill="#173b52" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="25" font-weight="680">Черновик ответа готов</text>
+    <rect x="1150" y="472" width="330" height="8" rx="4" fill="#b9d3e2"/>
+    <rect x="1150" y="493" width="300" height="8" rx="4" fill="#d1e1e9"/>
+    <rect x="1150" y="514" width="318" height="8" rx="4" fill="#d1e1e9"/>
+    <rect x="1150" y="564" width="149" height="57" rx="11" fill="#e9f1f6"/>
+    <text x="1196" y="600" fill="#356078" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700">Изменить</text>
+    <rect x="1312" y="564" width="168" height="57" rx="11" fill="#277d9b"/>
+    <text x="1340" y="600" fill="#fff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700">Одобрить ✓</text>
+  </g>
+  <text x="85" y="834" fill="#8db7d4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18">Поиск по документам и проверка ответа человеком</text>
+</svg>
