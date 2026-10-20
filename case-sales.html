@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1d32">
+  <meta name="description" content="Кейс Дмитрия Сандиева: локальный сервис сверяет остатки маркетплейса и учётной системы, объясняет расхождения и помогает расставить приоритеты.">
+  <title>Кейс «AI-контроль продаж и остатков» — Дмитрий Сандиев</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Дмитрий Сандиев — главная"><span class="brand-mark">ДС</span><span>Дмитрий Сандиев</span></a>
+      <nav class="main-nav" aria-label="Основная навигация"><a href="index.html#cases">Кейсы</a><a href="index.html#about">Обо мне</a><a href="index.html#experience">Опыт</a><a href="index.html#contact">Контакты</a></nav>
+      <a class="header-contact" href="mailto:sandievdmitrii@gmail.com">Написать мне <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="subpage-hero">
+      <div class="container">
+        <a class="back-link" href="index.html#cases">← Все кейсы</a>
+        <p class="section-kicker">Кейс 05 / Аналитика и AI</p>
+        <h1>AI-контроль <em>продаж и остатков</em></h1>
+        <p class="subpage-lead">Собрал локальный веб-сервис, который сверяет остатки маркетплейса и учётной системы. Он показывает менеджеру важные расхождения и даёт открыть исходные строки, расчёт и причину приоритета.</p>
+        <div class="case-meta">
+          <div><strong>Формат</strong>Локальный веб-сервис · загрузка CSV</div>
+          <div><strong>Что сделал</strong>Правила сверки · приоритеты · интерфейс · проверки</div>
+          <div><strong>Технологии</strong>Node.js · HTML · CSS · JavaScript · AI по запросу</div>
+        </div>
+      </div>
+    </section>
+    <div class="container"><figure class="sales-visual"><img src="sales-reconciliation.svg" alt="Схема работы сервиса: три CSV-выгрузки, сверка товара и склада, приоритетный разбор расхождения" width="1600" height="900" decoding="async"></figure></div>
+
+    <section class="case-body">
+      <div class="container case-body-grid">
+        <aside class="case-aside">
+          <p class="section-kicker">В этом кейсе</p>
+          <a href="#task">Задача</a>
+          <a href="#checks">Как работает сверка</a>
+          <a href="#example">Пример разбора</a>
+          <a href="#ai">Роль AI</a>
+          <a href="#result">Проверенный результат</a>
+          <a href="#next">Что нужно для внедрения</a>
+        </aside>
+        <article class="case-article">
+          <section class="case-block" id="task">
+            <p class="section-kicker">Задача</p>
+            <h2>Проверять расхождения без ручной сверки выгрузок</h2>
+            <p>Чтобы разобраться с остатком одного товара, менеджеру приходилось искать артикул в нескольких источниках, сопоставлять склады и время обновления, затем считать разницу вручную. Если сравнить разные склады или выгрузки за несопоставимые периоды, легко получить ложную тревогу.</p>
+            <p>Нужен был один порядок работы: загрузить данные, увидеть случаи по важности и понять, на каких строках основан каждый вывод.</p>
+          </section>
+
+          <section class="case-block" id="checks">
+            <p class="section-kicker">Сверка</p>
+            <h2>Сначала проверка данных, затем расчёт</h2>
+            <p>Сервис принимает три CSV-файла: доступные к продаже остатки маркетплейса, такие же остатки учётной системы и продажи за последние семь дней. Названия складов можно сопоставить в интерфейсе.</p>
+            <div class="flow-diagram" aria-label="Этапы сверки остатков"><div><small>01 / Загрузка</small><strong>Остатки и продажи из трёх CSV</strong></div><div><small>02 / Проверка</small><strong>Артикулы, склады, дубли и время</strong></div><div><small>03 / Сравнение</small><strong>Разница только для сопоставимых строк</strong></div><div><small>04 / Разбор</small><strong>Приоритет и исходные данные</strong></div></div>
+            <p>До сравнения программа ищет дубли, отсутствующие товары, некорректные и отрицательные значения, а также устаревшие выгрузки. Она считает разницу только для одной пары «артикул + склад», когда время выгрузки позволяет сделать вывод. Несопоставимые данные показывает отдельной проблемой, не подставляя выдуманное число.</p>
+            <p>Продажи за семь дней влияют на приоритет: случаи по товарам с активным спросом поднимаются выше. В карточке менеджер видит исходные строки, ход расчёта и объяснение приоритета; может оставить заметку, поставить статус «В работе» или «Проверено» и скачать CSV-отчёт. Статусы и заметки сохраняются после перезапуска.</p>
+          </section>
+
+          <section class="case-block" id="example">
+            <p class="section-kicker">Пример</p>
+            <h2>120 штук расхождения по A-1001</h2>
+            <p>В проверочном примере маркетплейс показывает <strong>120</strong> доступных к продаже штук, а учётная система — <strong>0</strong> на сопоставленном складе. Продажи за семь дней — <strong>28</strong> штук. В исходных материалах также записан ответ бота: «0 штук».</p>
+            <div class="split-note"><div class="note-card"><span>Расчёт</span><p>120 − 0 = 120 штук расхождения.</p></div><div class="note-card"><span>Приоритет</span><p>Высокий: по товару есть продажи, поэтому его стоит проверить раньше.</p></div></div>
+            <p>Карточка не объявляет причину расхождения: по этим файлам её установить нельзя. Менеджер проверяет время обновления, правила учёта доступного остатка и источник ответа бота.</p>
+          </section>
+
+          <section class="case-block" id="ai">
+            <p class="section-kicker">AI</p>
+            <h2>Подсказка по готовому разбору, а не расчёт вместо программы</h2>
+            <p>По запросу менеджера AI получает уже найденный случай с исходными строками и рассчитанной разницей. Он кратко пересказывает проверенные факты, отдельно обозначает возможные причины как гипотезы, предлагает следующие проверки и черновик сообщения ответственному сотруднику.</p>
+            <p>Числа и признаки проблем рассчитывает программа. AI не меняет данные и не отправляет сообщения; причину и дальнейшие действия определяет человек. Если API-ключ не настроен, сверка, разбор и CSV-отчёт продолжают работать, а интерфейс сообщает, что AI-подсказка недоступна.</p>
+          </section>
+
+          <section class="case-block" id="result">
+            <p class="section-kicker">Результат проверки</p>
+            <h2>На тестовом наборе нашёл все внесённые проблемы</h2>
+            <div class="metric-grid"><div class="metric-card"><strong>40</strong><span>товаров в подготовленном наборе</span></div><div class="metric-card"><strong>11 из 11</strong><span>внесённых проблем найдены</span></div><div class="metric-card"><strong>3</strong><span>случая высокого приоритета</span></div><div class="metric-card"><strong>33</strong><span>пары «артикул + склад» сравнены</span></div></div>
+            <p>Пятнадцать автоматических проверок охватывают обычное совпадение, расхождение, отсутствие товара, дубль, отрицательное значение, разные склады, устаревшую выгрузку, сохранение заметок и структуру отчёта.</p>
+            <p>Это результат подготовленного тестового набора. Сокращение времени работы и экономический эффект пока не измерялись.</p>
+          </section>
+
+          <section class="case-block" id="next">
+            <p class="section-kicker">Сейчас и дальше</p>
+            <h2>От CSV к рабочим подключениям</h2>
+            <p>Сервис запускается локально на Node.js; интерфейс написан на HTML, CSS и JavaScript. Для основной сверки не нужны регистрация и сторонние пакеты. Сейчас данные загружаются из CSV, авторизации в сервисе нет.</p>
+            <p>Для работы с действующими кабинетами Wildberries и Ozon и учётной системой нужны подключения к их API, безопасное хранение доступа, согласованные правила расчёта доступного остатка и регулярное обновление данных.</p>
+          </section>
+        </article>
+      </div>
+    </section>
+    <section class="related-cta"><div class="container related-inner"><div><p class="section-kicker">Ещё один кейс о данных и приоритетах</p><h2>ОПУ: заявки, проекты и отчёты</h2></div><a class="button button-primary" href="case-opu.html">Открыть кейс <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Дмитрий Сандиев</span><span>Портфолио · Уфа</span><a href="index.html#contact">Контакты ↗</a></div></footer>
+</body>
+</html>

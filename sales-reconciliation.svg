@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Сверка продаж и остатков</title>
+  <desc id="description">Три CSV-выгрузки проходят проверку и сопоставление. В примере по артикулу A-1001 показаны остатки 120 и 0, продажи 28 и разница 120 штук.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#071a31"/><stop offset="1" stop-color="#16436a"/></linearGradient>
+    <linearGradient id="panel" x2="1" y2="1"><stop stop-color="#183f61"/><stop offset="1" stop-color="#0f2b48"/></linearGradient>
+    <linearGradient id="line" x2="1"><stop stop-color="#59b9ee"/><stop offset="1" stop-color="#79dfcc"/></linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#9cc5e5" stroke-opacity=".08"/></pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#021324" flood-opacity=".3"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1460" cy="55" r="300" fill="#2d83b6" opacity=".12"/>
+  <circle cx="55" cy="870" r="300" fill="#36a8ba" opacity=".07"/>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="80" y="86" fill="#8dc6ed" font-size="22" font-weight="700" letter-spacing="4">КОНТРОЛЬ ДАННЫХ / CSV</text>
+    <text x="80" y="138" fill="#f1f8ff" font-size="35" font-weight="650">Загрузка → сверка → объяснимый приоритет</text>
+
+    <g filter="url(#shadow)">
+      <rect x="80" y="190" width="440" height="155" rx="18" fill="url(#panel)" stroke="#35678d"/>
+      <rect x="580" y="190" width="440" height="155" rx="18" fill="url(#panel)" stroke="#35678d"/>
+      <rect x="1080" y="190" width="440" height="155" rx="18" fill="url(#panel)" stroke="#35678d"/>
+    </g>
+    <g fill="#81c9e9" font-size="17" font-weight="700" letter-spacing="2">
+      <text x="115" y="238">01 / МАРКЕТПЛЕЙС</text>
+      <text x="615" y="238">02 / УЧЁТНАЯ СИСТЕМА</text>
+      <text x="1115" y="238">03 / ПРОДАЖИ</text>
+    </g>
+    <g fill="#f5fbff" font-size="27" font-weight="600">
+      <text x="115" y="288">Доступный остаток</text>
+      <text x="615" y="288">Доступный остаток</text>
+      <text x="1115" y="288">За последние 7 дней</text>
+    </g>
+    <g fill="#acc6d8" font-size="18">
+      <text x="115" y="322">Товар · склад · время выгрузки</text>
+      <text x="615" y="322">Товар · склад · время выгрузки</text>
+      <text x="1115" y="322">Товар · количество</text>
+    </g>
+
+    <path d="M300 346v43h500m0-43v43m500-43v43H800v28" fill="none" stroke="url(#line)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="800" cy="389" r="10" fill="#77d7d2"/>
+    <g filter="url(#shadow)"><rect x="80" y="425" width="1440" height="390" rx="22" fill="#f5f9fd"/></g>
+    <rect x="80" y="425" width="1440" height="79" rx="22" fill="#e5eef7"/>
+    <path d="M80 482h1440v22H80z" fill="#e5eef7"/>
+    <text x="120" y="474" fill="#173956" font-size="28" font-weight="700">Разбор случая · A-1001</text>
+    <rect x="1280" y="443" width="198" height="43" rx="21" fill="#fbe1d6"/>
+    <text x="1379" y="471" fill="#9a462c" text-anchor="middle" font-size="17" font-weight="700">ВЫСОКИЙ</text>
+
+    <g fill="#5e7589" font-size="19" font-weight="600">
+      <text x="125" y="560">МАРКЕТПЛЕЙС</text><text x="565" y="560">УЧЁТНАЯ СИСТЕМА</text><text x="1010" y="560">ПРОДАЖИ / 7 ДНЕЙ</text>
+    </g>
+    <g fill="#123654" font-size="63" font-weight="700">
+      <text x="125" y="640">120</text><text x="565" y="640">0</text><text x="1010" y="640">28</text>
+    </g>
+    <g fill="#6b8194" font-size="18">
+      <text x="125" y="675">доступно к продаже</text><text x="565" y="675">доступно к продаже</text><text x="1010" y="675">продано</text>
+    </g>
+    <path d="M510 548v140M952 548v140" stroke="#d3e0eb" stroke-width="2"/>
+    <rect x="120" y="716" width="1360" height="68" rx="11" fill="#dcecf8"/>
+    <text x="148" y="759" fill="#1b5c8a" font-size="25" font-weight="700">120 − 0 = 120 штук</text>
+    <text x="1443" y="759" fill="#44677f" font-size="18" text-anchor="end">Исходные строки и причина приоритета доступны в карточке</text>
+  </g>
+</svg>
