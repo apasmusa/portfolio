@@ -1,5 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#17253b"/>
-  <path d="M16 18h10c10 0 16 6 16 14s-6 14-16 14H16V18zm9 7v14h2c5 0 8-3 8-7s-3-7-8-7h-2z" fill="#f6f5f1"/>
-  <path d="M44 18h5v28h-5z" fill="#bc6248"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110" role="img" aria-label="Логотип Дмитрия Сандиева">
+  <rect width="110" height="110" rx="22" fill="#1d5fcc"/>
+  <g fill="#fff">
+    <rect x="24" y="22" width="16" height="16" rx="3"/>
+    <rect x="42" y="22" width="16" height="16" rx="3"/>
+    <rect x="60" y="22" width="16" height="16" rx="3"/>
+    <rect x="24" y="40" width="16" height="16" rx="3"/>
+    <rect x="24" y="58" width="16" height="16" rx="3"/>
+    <rect x="24" y="76" width="16" height="16" rx="3"/>
+    <rect x="42" y="76" width="16" height="16" rx="3"/>
+    <rect x="60" y="76" width="16" height="16" rx="3"/>
+  </g>
+  <g fill="#91c5ff">
+    <rect x="78" y="22" width="16" height="16" rx="3"/>
+    <rect x="78" y="76" width="16" height="16" rx="3"/>
+  </g>
 </svg>
