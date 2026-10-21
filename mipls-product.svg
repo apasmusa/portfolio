@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">МИПЛС: развитие онлайн-сервиса</title>
+  <desc id="description">Схема проекта: поиск компании для настольных, компьютерных и спортивных игр; продуктовые решения, команда и запуск сервиса.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0a1c34"/><stop offset="1" stop-color="#1b4268"/></linearGradient>
+    <linearGradient id="card" x2="1" y2="1"><stop stop-color="#f9fcff"/><stop offset="1" stop-color="#e8f2fc"/></linearGradient>
+    <linearGradient id="blue" x2="1"><stop stop-color="#307bd0"/><stop offset="1" stop-color="#49b2cb"/></linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse"><path d="M42 0H0V42" fill="none" stroke="#a7c8e5" stroke-opacity=".08"/></pattern>
+    <filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="26" flood-color="#041729" flood-opacity=".28"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="80" cy="860" r="320" fill="#2887cb" opacity=".08"/>
+  <circle cx="1510" cy="65" r="320" fill="#55c6d3" opacity=".07"/>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="82" y="88" fill="#91c9ed" font-size="22" font-weight="700" letter-spacing="4">МИПЛС / СОБСТВЕННЫЙ ПРОДУКТ</text>
+    <text x="82" y="140" fill="#f3f9ff" font-size="36" font-weight="650">Идея → продукт → запуск для пользователей</text>
+
+    <g filter="url(#shadow)"><rect x="82" y="194" width="840" height="622" rx="22" fill="url(#card)"/></g>
+    <rect x="82" y="194" width="840" height="78" rx="22" fill="#dceaf7"/>
+    <path d="M82 250h840v22H82z" fill="#dceaf7"/>
+    <circle cx="124" cy="232" r="7" fill="#5ea9dc"/><circle cx="147" cy="232" r="7" fill="#91c4e6"/><circle cx="170" cy="232" r="7" fill="#bed8e9"/>
+    <text x="810" y="239" fill="#426782" font-size="18" text-anchor="end">МИПЛС</text>
+    <text x="133" y="346" fill="#183b58" font-size="37" font-weight="700">Найти компанию для игры</text>
+    <text x="133" y="387" fill="#607e92" font-size="20">Выберите формат и найдите участников</text>
+
+    <rect x="133" y="435" width="225" height="90" rx="14" fill="#e4f0fb" stroke="#c5dced"/>
+    <rect x="379" y="435" width="225" height="90" rx="14" fill="#e3f2f2" stroke="#c0e2df"/>
+    <rect x="625" y="435" width="225" height="90" rx="14" fill="#edf0fc" stroke="#d2d9f0"/>
+    <text x="245" y="490" fill="#235f9a" font-size="22" font-weight="650" text-anchor="middle">Настольные</text>
+    <text x="491" y="490" fill="#257d86" font-size="22" font-weight="650" text-anchor="middle">Компьютерные</text>
+    <text x="737" y="490" fill="#536daa" font-size="22" font-weight="650" text-anchor="middle">Спортивные</text>
+
+    <text x="133" y="606" fill="#5f7b8e" font-size="18" font-weight="700" letter-spacing="2">ПОИСК УЧАСТНИКОВ</text>
+    <path d="M174 687H728" stroke="url(#blue)" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#3e91c5" stroke="#f9fcff" stroke-width="7"><circle cx="174" cy="687" r="27"/><circle cx="330" cy="687" r="27"/><circle cx="486" cy="687" r="27"/><circle cx="642" cy="687" r="27"/></g>
+    <circle cx="798" cy="687" r="35" fill="#1c578b"/>
+    <path d="M785 687l9 9 19-23" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="133" y="771" fill="#607e92" font-size="20">Сценарии поиска, интерфейс и работа команды</text>
+
+    <g filter="url(#shadow)">
+      <rect x="976" y="194" width="542" height="185" rx="20" fill="#164466" stroke="#3576a5"/>
+      <rect x="976" y="400" width="542" height="185" rx="20" fill="#164466" stroke="#3576a5"/>
+      <rect x="976" y="606" width="542" height="210" rx="20" fill="#164466" stroke="#3576a5"/>
+    </g>
+    <g fill="#91c9ed" font-size="18" font-weight="700" letter-spacing="2">
+      <text x="1015" y="242">ПРОДУКТ</text><text x="1015" y="448">КОМАНДА</text><text x="1015" y="654">РЕЗУЛЬТАТ</text>
+    </g>
+    <g fill="#f4faff" font-size="27" font-weight="650">
+      <text x="1015" y="291">Приоритеты и UX/UI</text>
+      <text x="1015" y="497">Разработка и подрядчики</text>
+      <text x="1015" y="705">Сервис запущен</text>
+    </g>
+    <g fill="#b7d0e1" font-size="18">
+      <text x="1015" y="334">От идеи к понятным сценариям</text>
+      <text x="1015" y="540">Два разработчика и маркетолог</text>
+      <text x="1015" y="750">Для пользователей · 2023–2026</text>
+    </g>
+    <path d="M935 287h27M935 493h27M935 710h27" stroke="#78cbd9" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
