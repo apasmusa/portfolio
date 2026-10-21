@@ -103,3 +103,4 @@ body{background:var(--paper)}h1,h2,h3{letter-spacing:-.052em}h1 em,h2 em{font-fa
 .mipls-visual{margin:0}
 .mipls-visual img{display:block;width:100%;height:auto;border:1px solid #244765;border-radius:14px;box-shadow:0 16px 40px rgba(13,36,63,.16)}
 @media(max-width:760px){.case-card-mipls{display:flex;grid-column:auto}.case-art-mipls{height:275px;min-height:0}}
+.hero-actions{flex-wrap:wrap}
